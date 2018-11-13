@@ -1,0 +1,10 @@
+Sidosasut.tbl -- Sidosasutermien muunnos lyhenteiksi
+File generated: Thu Dec 31 15:02:30 2015
+
+a l k a l i n e 0x20 p a p e r 	| a l k . 0x20 p a p e r 
+h a r d b a c k 	| h b k . 
+i n b u n d e n 	| i n b . 
+n i d o t t u 	| n i d . 
+p a p e r b a c k 	| p b k . 
+s i d o t t u 	| s i d . 
+#DEFAULT	| COPY
