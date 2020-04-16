@@ -1,4 +1,4 @@
-FROM quay.io/natlibfi/yazproxy:1
+FROM quay.io/natlibfi/yazproxy:natlibfi
 
 COPY MARC21slim2DC.xsl /conf/xsl/
 COPY MARC21slim2MODS.xsl /conf/xsl/
