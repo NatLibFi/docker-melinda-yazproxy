@@ -8,3 +8,8 @@ COPY MARC21slim2SRWDC.xsl /conf/xsl/
 COPY MARC21slimUtils.xsl /conf/xsl/
 COPY pqf.properties /conf/
 COPY usemarcon /conf/
+
+RUN addgroup -S yaz && adduser -S -h /yaz yaz yaz chown -R yaz:yaz /yaz
+
+WORKDIR /yaz
+USER yaz
