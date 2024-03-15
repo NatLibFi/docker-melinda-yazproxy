@@ -8,5 +8,3 @@ COPY MARC21slim2SRWDC.xsl /conf/xsl/
 COPY MARC21slimUtils.xsl /conf/xsl/
 COPY pqf.properties /conf/
 COPY usemarcon /conf/
-
-USER yaz
