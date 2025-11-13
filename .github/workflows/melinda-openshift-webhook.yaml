@@ -6,6 +6,7 @@ jobs:
   openshift-webhook:
     name: OpenShift webhook for image builder
     runs-on: ubuntu-latest
+    container: node:22
 
     steps:
     - name: Test (from test branch) webhook
@@ -21,9 +22,17 @@ jobs:
         url: ${{ secrets.WEBHOOK_URL_PROVIDERS_TEST_FROM_MAIN }}
         body: '{}'
 
-    - name: Prod webhook
+    - name: Prod (from main branch) webhook
       uses: joelwmale/webhook-action@master
       if: github.ref == 'refs/heads/main'
       with:
-        url: ${{ secrets.WEBHOOK_URL_PROD }}
+        url: ${{ secrets.WEBHOOK_URL_PROVIDERS_PROD_FROM_MAIN }}
         body: '{}'
+
+    - name: Prod (from test branch) webhook
+      uses: joelwmale/webhook-action@master
+      if: github.ref == 'refs/heads/test'
+      with:
+        url: ${{ secrets.WEBHOOK_URL_PROVIDERS_PROD_FROM_TEST }}
+        body: '{}'
+
